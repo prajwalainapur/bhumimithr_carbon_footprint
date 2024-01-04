@@ -35,9 +35,9 @@ Others = 0.45
 
 #Scope 2 - Steam
 #Scope 1 - Stationary Combustion
-anthracite_coal = 104.4418
-bituminous_coal = 94.0318
-lignite_coal = 98.4718
+coal_anthracite = 104.4418
+coal_bituminous = 94.0318
+coal_lignite = 98.4718
 natural_gas = 53.1148
 propane_gas = 61.7138
 kerosene = 75.4538

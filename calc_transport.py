@@ -17,5 +17,5 @@ def calculate_emissions(content):
     nett_emissions = adjusted_emissions_kg * no_trips
 
     emissions_perpart = nett_emissions / content['total_units'] 
-
+    print(emissions_perpart)
     return emissions_perpart

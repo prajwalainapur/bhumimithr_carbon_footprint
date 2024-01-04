@@ -55,6 +55,6 @@ def calculate_scope3(content):
     part_conversion = (content['weight_per_unit']) / (content['annual_tonnage'] * content['yield_percent'] / 100)
 
     scope3_part = scope3_total * part_conversion
-
+    print(scope3_part)
     return scope3_part
 

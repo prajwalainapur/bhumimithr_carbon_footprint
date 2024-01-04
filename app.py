@@ -26,6 +26,7 @@ print('Hello')
 # on the terminal type: curl http://127.0.0.1:5000/transport
 @app.route('/transport', methods = ['GET']) 
 def _transport(): 
+    print('Request received for transport')
     if(request.method == 'GET'): 
         content = request.json
 
@@ -39,6 +40,7 @@ def _transport():
 # this returns 100 (square of 10) 
 @app.route('/scope3', methods = ['GET']) 
 def _scope3(): 
+    print('Request received for scope 3')
 
     if(request.method == 'GET'): 
         content = request.json
@@ -49,16 +51,17 @@ def _scope3():
     
 @app.route('/scope2', methods = ['GET']) 
 def _scope2(): 
+    print('Request received for scope 2')
 
     if(request.method == 'GET'): 
         content = request.json
-
         emissions_unit = scope2.calculate_scope2(content)
 
         return jsonify({'data': emissions_unit})
      
 @app.route('/scope1', methods = ['GET']) 
 def _scope1(): 
+    print('Request received for scope 1')
 
     if(request.method == 'GET'): 
         content = request.json

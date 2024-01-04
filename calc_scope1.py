@@ -24,8 +24,8 @@ def calculate_mobile_combustion(content):###
 
     return total_emissions
 
-def calculate_refrigeration(content):
-    data = content['refrigeration']
+def calculate_refridgeration(content):
+    data = content['refridgeration']
     total_emissions = 0
 
     for ele in data.keys():
@@ -58,14 +58,14 @@ def calculate_scope1(content):
 
     stationary_combustion = calculate_stationary_combustion(content)
     mobile_combustion = calculate_mobile_combustion(content)
-    refrigeration = calculate_refrigeration(content)
+    refridgeration = calculate_refridgeration(content)
     fire_suppression = calculate_fire_suppression(content)
     purchased_gases = calculate_purchased_gases(content)
 
-    scope1_total = stationary_combustion + mobile_combustion + refrigeration + fire_suppression + purchased_gases
+    scope1_total = stationary_combustion + mobile_combustion + refridgeration + fire_suppression + purchased_gases
 
     part_conversion = (content['weight_per_unit']) / (content['annual_tonnage'] * content['yield_percent'] / 100)
 
     scope1_part = scope1_total * part_conversion
-
+    print(scope1_part)
     return scope1_part
